@@ -17,13 +17,13 @@
 		</svg>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}>
-				<a href="/">Home</a>
+				<a href="/">Portfolio</a>
 			</li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname.startsWith('/sverdle')}>
-				<a href="/sverdle">Sverdle</a>
+			<li class:active={$page.url.pathname === '/contact'}>
+				<a href="/contact">Contact</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -32,8 +32,8 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
+		<a href="https://github.com/transformation-dev/austen-maccherone-com">
+			<img src={github} alt="GitHub repo for this website" />
 		</a>
 	</div>
 </header>
