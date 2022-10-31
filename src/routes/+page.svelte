@@ -1,14 +1,14 @@
 <script>
 	import PhotoCarousel from '$lib/components/PhotoCarousel.svelte';
 
-	import magpie from '$lib/images/magpie.jpg';
-	import flick from '$lib/images/flick.jpg';
-	import blackbird from '$lib/images/blackbird.jpg';
+	import art1 from '$lib/images/Art1.jpeg';
+	import art2 from '$lib/images/Art2.jpeg';
+	import art3 from '$lib/images/Art3.jpeg';
 
 	let photos = [
-		{ src: magpie, text: 'Magpie' },
-		{ src: flick, text: 'Flick' },
-		{ src: blackbird, text: 'Blackbird' }
+		{ src: art1, text: 'Some really cool art' },
+		{ src: art2, text: 'Even more cool art' },
+		{ src: art3, text: 'The coolest art' }
 	];
 </script>
 

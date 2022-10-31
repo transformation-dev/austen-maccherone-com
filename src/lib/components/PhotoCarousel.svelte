@@ -39,7 +39,10 @@
 	// translateZ, rotateY, left, and width are used to position and rotate each photo in the carousel.
 	// There is a complex interaction between the translateZ, rotateY, and the perspective depth when using CSS 3D perspective.
 	// Without that, the far left and far right slots would have been rotated by 90 degrees to be perpendicular to the screen.
+	// This page is what helped me learn how to do CSS 3D perspective: 
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 	// The below values are the result of a lot of experimentation.
+
 	const motionValues = [
 		{translateZ: 0, rotateY: 0, left: 210, width: 600},  // center 
 		{translateZ: -60, rotateY: 30, left: 810, width: 200},  // center + 1 = right
