@@ -1,13 +1,13 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/am-logo.svg';
+	// import logo from '$lib/images/am-logo.svg';
 	import github from '$lib/images/github.svg';
 </script>
 
 <header>
 	<div class="corner">
 		<a href="/">
-			<img src={logo} alt="Austen Maccherone" />
+			<img src="/am-logo.svg" alt="Austen Maccherone" />
 		</a>
 	</div>
 
