@@ -185,11 +185,14 @@
 	</div>
 
 	<!-- The center (index: 0) photo -->
-	<div class="photoContainer" style="left: {$centerLeft}px; width: {$centerWidth}px">
-		<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+	<div 
+		class="photoContainer" 
+		style="left: {$centerLeft}px; width: {$centerWidth}px" 			
+	    on:mouseover={() => isHovered = true}
+		on:mouseout={() => isHovered = false}
+	>
 		<img 
-			on:mouseover={() => isHovered = true}
-			on:mouseout={() => isHovered = false}
 			class:blurred={isHovered}
 			class="photo" 
 			style="transform: translateZ({$centerTranslateZ}px) rotateY({$centerRotateY}deg);"
