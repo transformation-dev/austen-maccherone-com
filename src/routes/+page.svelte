@@ -10,9 +10,9 @@
 	let photos = [
 		{ src: art1, text: 'Some really cool art' },
 		{ src: art2, text: 'Even more cool art' },
-		{ src: art3, text: 'The coolest art' },
-		{ src: art4, text: 'The coolest art' },
-		{ src: art5, text: 'The coolest art' },
+		{ src: art3, text: 'The coolest art 3' },
+		{ src: art4, text: 'The coolest art 4' },
+		{ src: art5, text: 'The coolest art 5' },
 
 	];
 </script>
