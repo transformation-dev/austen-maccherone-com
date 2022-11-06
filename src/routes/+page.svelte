@@ -6,6 +6,7 @@
 	import art3 from '$lib/images/Art3.jpeg';
 	import art4 from '$lib/images/Art4.jpeg';
 	import art5 from '$lib/images/Art5.jpeg';
+	import art6 from '$lib/images/Art5.jpeg';
 
 	let photos = [
 		{ src: art1, text: 'Some really cool art' },
@@ -13,6 +14,7 @@
 		{ src: art3, text: 'The coolest art' },
 		{ src: art4, text: 'The coolest art' },
 		{ src: art5, text: 'The coolest art' },
+		{ src: art6, text: 'The coolest art' },
 
 	];
 </script>
