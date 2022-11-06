@@ -11,7 +11,7 @@
 	import art8 from '$lib/images/Art8.jpeg';
 
 	let photos = [
-		{ src: art1, text: '"The Conductor" (sharpie on bristol)' },
+		{ src: art1, text: 'Ensure we are on the Graphics page' },
 		{ src: art2, text: 'Even more cool art' },
 		{ src: art3, text: 'Still Life (charcoal on grey canson paper)' },
 		{ src: art4, text: 'Color Wheel (acryllic on bristol) '},

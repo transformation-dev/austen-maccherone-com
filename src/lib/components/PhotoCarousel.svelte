@@ -175,7 +175,7 @@
 
 	<!-- The right of center (index: +1) photo -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div on:click={() => rotate(+1)} class="photoContainer" style="left: {$plus1Left}px; width: {$plus1Width}px">
+	<div on:click={() => rotate(+1)} class="photoContainer plus-minus-1" style="left: {$plus1Left}px; width: {$plus1Width}px">
 		<img 
 			class="photo" 
 			style="transform: translateZ({$plus1TranslateZ}px) rotateY({$plus1RotateY}deg)"
@@ -218,6 +218,10 @@
 		transform-style: preserve-3d;
 		position: absolute;
 		height: 400px;
+	}
+
+	.plus-minus-1 {
+		cursor: pointer;
 	}
 	
 	.photo {

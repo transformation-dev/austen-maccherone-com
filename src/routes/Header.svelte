@@ -14,7 +14,10 @@
 	<nav>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}>
-				<a href="/">Portfolio</a>
+				<a href="/">Art</a>
+			</li>
+			<li class:active={$page.url.pathname === '/graphics'}>
+				<a href="/graphics">Graphics</a>
 			</li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a href="/about">About</a>
