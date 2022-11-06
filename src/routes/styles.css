@@ -26,6 +26,10 @@ body {
 
 h1,
 h2,
+li{ /*text-decoration: underline overline #FF3028;*/
+	font-family: Marker Felt, fantasy;
+
+}
 p {
 	font-weight: 400;
 }
