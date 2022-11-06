@@ -20,6 +20,7 @@
 		throw new Error('PhotoCarousel requires at least one photo');
 	}
 	let currentIndex = 0;
+	let isHovered = false;
 
 	// There are 3 visible slots in the carousel but you can have as many as you want in the photos array.
 	// If you have less than 3 photos, the photos will repeat to fill up the 3 visible (and 2 invisible) slots.
@@ -74,6 +75,8 @@
 	const plus2Width = tweened(motionValues.at(+2).width, options);
 
 	function rotate(delta) {
+		isHovered = false;  // Not necessary until/unless we add swipe and/or keystroke support
+
 		// The following section sets the new motion values for the photos in the carousel and starts the animation
 		// The use of the remainder operator, %, adjusts the index so it's not out of bounds
 		minus2TranslateZ.set(motionValues.at((5 - delta - 2) % 5).translateZ);
@@ -182,13 +185,21 @@
 	</div>
 
 	<!-- The center (index: 0) photo -->
-	<div class="photoContainer" style="left: {$centerLeft}px; width: {$centerWidth}px">
+	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+	<div 
+		class="photoContainer" 
+		style="left: {$centerLeft}px; width: {$centerWidth}px" 			
+	    on:mouseover={() => isHovered = true}
+		on:mouseout={() => isHovered = false}
+	>
 		<img 
+			class:blurred={isHovered}
 			class="photo" 
-			style="transform: translateZ({$centerTranslateZ}px) rotateY({$centerRotateY}deg)"
+			style="transform: translateZ({$centerTranslateZ}px) rotateY({$centerRotateY}deg);"
 			src={photos.at((currentIndex) % photoCount).src} 
 			alt={photos.at((currentIndex) % photoCount).text} 
 		/>
+		<div id="photo-text" class:hidden={!isHovered} class="centered">{photos.at((currentIndex) % photoCount).text}</div>
 	</div>
 
 </div>
@@ -210,9 +221,31 @@
 	}
 	
 	.photo {
+		position: relative;
+		text-align: center;
 		width: 100%;
 		height: 100%;
 		object-fit: fill;
+	}
+
+	#photo-text {
+		color: var(--color-theme-1);
+		font-size: 30px;
+	}
+
+	.centered {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.blurred {
+		filter: blur(3px) brightness(50%);
 	}
 
 </style>
