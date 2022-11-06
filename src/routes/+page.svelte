@@ -1,24 +1,24 @@
 <script>
 	import PhotoCarousel from '$lib/components/PhotoCarousel.svelte';
 
-	import art1 from '$lib/images/Art1.jpeg';
-	import art2 from '$lib/images/Art2.jpg';
-	import art3 from '$lib/images/Art3.jpeg';
-	import art4 from '$lib/images/Art4.jpg';
-	import art5 from '$lib/images/Art5.jpg';
-	import art6 from '$lib/images/Art6.jpg';
-	import art7 from '$lib/images/Art7.jpeg';
-	import art8 from '$lib/images/Art8.jpeg';
+	import art1 from '$lib/images/AArt1.jpg';
+	import art2 from '$lib/images/AArt2.jpg';
+	import art3 from '$lib/images/AArt3.jpg';
+	import art4 from '$lib/images/AArt4.jpg';
+	import art5 from '$lib/images/AArt5.jpg';
+	import art6 from '$lib/images/AArt6_.jpg';
+	import art7 from '$lib/images/AArt7.jpg';
+	
 
 	let photos = [
-		{ src: art1, text: '"The Conductor" (sharpie on bristol)' },
-		{ src: art2, text: 'Even more cool art' },
+		{ src: art1, text: 'Flowers (ink)' },
+		{ src: art2, text: 'Real Life Perspective (stained with coffee)' },
 		{ src: art3, text: 'Still Life (charcoal on grey canson paper)' },
 		{ src: art4, text: 'Color Wheel (acryllic on bristol) '},
-		{ src: art5, text: '"Ducky in a Pond" (multimedia)' },
-		{ src: art6, text: 'Real Life Perspective (stained with coffee)' },
-		{ src: art7, text: 'Mask Graphic' },
-		{ src: art8, text: 'Flowers (ink)' },
+		{ src: art5, text: '"Fire and Water" (watercolor)' },
+		{ src: art6, text: '"The Composer" (sharpie on bristol)' },
+		{ src: art7, text: 'Lady With a Hat (charcoal on tan canson paper)' },
+		
 
 	];
 </script>
@@ -32,7 +32,7 @@
 	<PhotoCarousel {photos} />
 </section>
 
-<h1 id="description">Hello</h1>
+<h1 id="description">Hello artist statement where to go</h1>
 
 <style>
 	section {
