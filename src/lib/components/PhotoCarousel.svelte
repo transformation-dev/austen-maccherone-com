@@ -131,7 +131,9 @@
 
 </script>
 
-
+<div style="height:50px;">
+	<div id="photo-text" class:hidden={!isHovered} class="centered">{photos.at((currentIndex) % photoCount).text}</div>
+</div>
 <div class="carouselContainer">
 	
 	<!-- 
@@ -199,8 +201,9 @@
 			src={photos.at((currentIndex) % photoCount).src} 
 			alt={photos.at((currentIndex) % photoCount).text} 
 		/>
-		<div id="photo-text" class:hidden={!isHovered} class="centered">{photos.at((currentIndex) % photoCount).text}</div>
+		
 	</div>
+	
 
 </div>
 
@@ -237,19 +240,19 @@
 		font-size: 30px;
 	}
 
-	.centered {
+	/* .centered {
 	  position: absolute;
 	  top: 50%;
 	  left: 50%;
 	  transform: translate(-50%, -50%);
-	}
+	} */
 
 	.hidden {
 		display: none;
 	}
 
-	.blurred {
+	/* .blurred {
 		filter: blur(3px) brightness(50%);
-	}
+	} */
 
 </style>
