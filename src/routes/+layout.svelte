@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>Austen Maccherone</p>
+		<p>© 2022 - Austen Maccherone</p>
 	</footer>
 </div>
 
@@ -38,16 +38,15 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
+		padding: 5px;
+		height: 20px;
+		background-color: var(--color-bg-0);
+		font-size: smaller;
 	}
 
 	@media (min-width: 480px) {
 		footer {
-			padding: 12px 0;
+			padding: 5px 0;
 		}
 	}
 </style>
