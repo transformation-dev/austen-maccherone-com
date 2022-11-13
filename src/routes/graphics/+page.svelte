@@ -5,7 +5,7 @@
 		{ src: '/images/Art9.jpg', text: 'human' },
 		{ src: '/images/Art10_.jpg', text: 'masks' },
 		{ src: '/images/Art11.jpg', text: 'dark woods' },
-		{ src: '/images/Art12_4.jpg', text: 'clown'},
+		{ src: '/images/AArt12.jpg', text: 'clown'},
 	];
 </script>
 
