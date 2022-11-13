@@ -18,7 +18,7 @@
 	<PhotoCarousel {photos} />
 </section>
 
-<h1 id="description">Hello</h1>
+<h1 id="description">Digital Graphics</h1>
 
 <style>
 	section {
@@ -30,6 +30,6 @@
 	}
 
 	#description {
-		text-align: left;
+		text-align: center;
 	}
 </style>
