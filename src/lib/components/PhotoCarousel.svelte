@@ -45,11 +45,11 @@
 	// The below values are the result of a lot of experimentation.
 
 	const motionValues = [
-		{translateZ: 0, rotateY: 0, left: 210, width: 600},  // center 
-		{translateZ: -60, rotateY: 30, left: 810, width: 200},  // center + 1 = right
-		{translateZ: -170, rotateY: 60, left: 1010, width: 10},  // center + 2 = far right
-		{translateZ: -170, rotateY: -60, left: 0, width: 10},  // center - 2 = far left
-		{translateZ: -60, rotateY: -30, left: 10, width: 200},  // center - 1 = left
+		{translateZ: 0, rotateY: 0, left: 15.75, width: 45},  // center 
+		{translateZ: -4.5, rotateY: 30, left: 60.75, width: 15},  // center + 1 = right
+		{translateZ: -12.75, rotateY: 60, left: 75.75, width: .75},  // center + 2 = far right
+		{translateZ: -12.75, rotateY: -60, left: 0, width: .75},  // center - 2 = far left
+		{translateZ: -4.5, rotateY: -30, left: .75, width: 15},  // center - 1 = left
 	]
 
 	// The following section sets up the Svelte "tweens" which will animate the photos in the carousel
@@ -134,6 +134,7 @@
 <div style="height:50px;">
 	<div id="photo-text" class:hidden={!isHovered} class="centered">{photos.at((currentIndex) % photoCount).text}</div>
 </div>
+
 <div class="carouselContainer">
 	
 	<!-- 
@@ -145,20 +146,20 @@
  	-->
 
 	<!-- The far left (index: -2) photo -->
-	<div class="photoContainer" style="left: {$minus2Left}px; width: {$minus2Width}px">
+	<div class="photoContainer" style="left: {$minus2Left}vw; width: {$minus2Width}vw">
 		<img 
 			class="photo" 
-			style="transform: translateZ({$minus2TranslateZ}px) rotateY({$minus2RotateY}deg)"
+			style="transform: translateZ({$minus2TranslateZ}vw) rotateY({$minus2RotateY}deg)"
 			src={photos.at((currentIndex - 2) % photoCount).src} 
 			alt={photos.at((currentIndex - 2) % photoCount).text} 
 		/>
 	</div>
 
 	<!-- The far right (index: +2) photo -->
-	<div class="photoContainer" style="left: {$plus2Left}px; width: {$plus2Width}px">
+	<div class="photoContainer" style="left: {$plus2Left}vw; width: {$plus2Width}vw">
 		<img 
 			class="photo" 
-			style="transform: translateZ({$plus2TranslateZ}px) rotateY({$plus2RotateY}deg)"
+			style="transform: translateZ({$plus2TranslateZ}vw) rotateY({$plus2RotateY}deg)"
 			src={photos.at((currentIndex + 2) % photoCount).src} 
 			alt={photos.at((currentIndex + 2) % photoCount).text} 
 		/>
@@ -166,10 +167,10 @@
 
 	<!-- The left of center (index: -1) photo -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div on:click={() => rotate(-1)} class="photoContainer" style="left: {$minus1Left}px; width: {$minus1Width}px">
+	<div on:click={() => rotate(-1)} class="photoContainer" style="left: {$minus1Left}vw; width: {$minus1Width}vw">
 		<img 
 			class="photo" 
-			style="transform: translateZ({$minus1TranslateZ}px) rotateY({$minus1RotateY}deg)"
+			style="transform: translateZ({$minus1TranslateZ}vw) rotateY({$minus1RotateY}deg)"
 			src={photos.at((currentIndex - 1) % photoCount).src} 
 			alt={photos.at((currentIndex - 1) % photoCount).text} 
 		/>
@@ -177,10 +178,10 @@
 
 	<!-- The right of center (index: +1) photo -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div on:click={() => rotate(+1)} class="photoContainer plus-minus-1" style="left: {$plus1Left}px; width: {$plus1Width}px">
+	<div on:click={() => rotate(+1)} class="photoContainer plus-minus-1" style="left: {$plus1Left}vw; width: {$plus1Width}vw">
 		<img 
 			class="photo" 
-			style="transform: translateZ({$plus1TranslateZ}px) rotateY({$plus1RotateY}deg)"
+			style="transform: translateZ({$plus1TranslateZ}vw) rotateY({$plus1RotateY}deg)"
 			src={photos.at((currentIndex + 1) % photoCount).src} 
 			alt={photos.at((currentIndex + 1) % photoCount).text} 
 		/>
@@ -190,14 +191,14 @@
 	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 	<div 
 		class="photoContainer" 
-		style="left: {$centerLeft}px; width: {$centerWidth}px" 			
+		style="left: {$centerLeft}vw; width: {$centerWidth}vw" 			
 	    on:mouseover={() => isHovered = true}
 		on:mouseout={() => isHovered = false}
 	>
 		<img 
 			class:blurred={isHovered}
 			class="photo" 
-			style="transform: translateZ({$centerTranslateZ}px) rotateY({$centerRotateY}deg);"
+			style="transform: translateZ({$centerTranslateZ}vw) rotateY({$centerRotateY}deg);"
 			src={photos.at((currentIndex) % photoCount).src} 
 			alt={photos.at((currentIndex) % photoCount).text} 
 		/>
@@ -212,15 +213,15 @@
 
 	.carouselContainer {
 		position: relative;
-		width: 1020px;  /* the sum of the widths of the 5 photos: 10 + 200 + 600 + 200 + 10 px wide */
-		height: 400px;
-		perspective: 800px;
+		width: 76.5vw;  /* the sum of the widths of the 5 photos: 10 + 200 + 600 + 200 + 10 px wide or .75 + 15 + 45 + 15 + .75 vw = 76.5 */
+		height: 30vw;
+		perspective: 60vw;
 	}
 
 	.photoContainer {
 		transform-style: preserve-3d;
 		position: absolute;
-		height: 400px;
+		height: 30vw;
 	}
 
 	.plus-minus-1 {
@@ -237,7 +238,7 @@
 
 	#photo-text {
 		color: var(--color-theme-1);
-		font-size: 30px;
+		font-size: 2.2vw;
 	}
 
 	/* .centered {
