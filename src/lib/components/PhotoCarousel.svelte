@@ -167,7 +167,7 @@
 
 	<!-- The left of center (index: -1) photo -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div on:click={() => rotate(-1)} class="photoContainer" style="left: {$minus1Left}vw; width: {$minus1Width}vw">
+	<div on:click={() => rotate(-1)} class="photoContainer plus-minus-1" style="left: {$minus1Left}vw; width: {$minus1Width}vw">
 		<img 
 			class="photo" 
 			style="transform: translateZ({$minus1TranslateZ}vw) rotateY({$minus1RotateY}deg)"
