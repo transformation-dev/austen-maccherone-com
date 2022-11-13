@@ -48,11 +48,11 @@
 	// The below values are the result of a lot of experimentation.
 
 	const motionValues = [
-		{translateZ: 0, rotateY: 0, left: 15.75, width: 45},  // center 
-		{translateZ: -4.5, rotateY: 30, left: 60.75, width: 15},  // center + 1 = right
-		{translateZ: -12.75, rotateY: 60, left: 75.75, width: .75},  // center + 2 = far right
-		{translateZ: -12.75, rotateY: -60, left: 0, width: .75},  // center - 2 = far left
-		{translateZ: -4.5, rotateY: -30, left: .75, width: 15},  // center - 1 = left
+		{translateZ: 0, rotateY: 0, left: 21, width: 60},  // center 
+		{translateZ: -6, rotateY: 30, left: 81, width: 20},  // center + 1 = right
+		{translateZ: -17, rotateY: 60, left: 101, width: 1},  // center + 2 = far right
+		{translateZ: -17, rotateY: -60, left: 0, width: 1},  // center - 2 = far left
+		{translateZ: -6, rotateY: -30, left: 1, width: 20},  // center - 1 = left
 	]
 
 	// The following section sets up the Svelte "tweens" which will animate the photos in the carousel
@@ -239,15 +239,15 @@
 
 	.carouselContainer {
 		position: relative;
-		width: 76.5vw;  /* the sum of the widths of the 5 photos: 10 + 200 + 600 + 200 + 10 px wide or .75 + 15 + 45 + 15 + .75 vw = 76.5 */
-		height: 30vw;
-		perspective: 60vw;
+		width: 102vw;  /* the sum of the widths of the 5 photos: 1 + 20 + 60 + 20 + 1 vw wide */
+		height: 40vw;
+		perspective: 80vw;
 	}
 
 	.photoContainer {
 		transform-style: preserve-3d;
 		position: absolute;
-		height: 30vw;
+		height: 40vw;
 	}
 
 	.plus-minus-1 {
