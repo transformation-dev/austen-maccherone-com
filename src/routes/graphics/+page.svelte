@@ -1,17 +1,11 @@
 <script>
 	import PhotoCarousel from '$lib/components/PhotoCarousel.svelte';
-
-	import art9 from '$lib/images/Art9.jpg';
-	import art10 from '$lib/images/Art10_.jpg';
-	import art11 from '$lib/images/Art11.jpg';
-	import art12 from '$lib/images/Art12_4.jpg';
 	
-
 	let photos = [
-		{ src: art9, text: 'human' },
-		{ src: art10, text: 'masks' },
-		{ src: art11, text: 'dark woods' },
-		{ src: art12, text: 'clown'},
+		{ src: '/images/Art9.jpg', text: 'human' },
+		{ src: '/images/Art10_.jpg', text: 'masks' },
+		{ src: '/images/Art11.jpg', text: 'dark woods' },
+		{ src: '/images/Art12_4.jpg', text: 'clown'},
 	];
 </script>
 

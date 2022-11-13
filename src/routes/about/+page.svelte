@@ -4,12 +4,12 @@
 </svelte:head>
 
 <script>
-	import photoMe from '$lib/images/Me.jpg';
+	
 </script>
 
 <div class="text-column">
 	<h1>About Me</h1>
-	<img src={photoMe} alt="Austen Maccherone" />
+	<img src='/Me.jpg' alt="Austen Maccherone" />
 	
 
 	<h1>About this website</h1>

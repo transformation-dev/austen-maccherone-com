@@ -1,25 +1,14 @@
 <script>
 	import PhotoCarousel from '$lib/components/PhotoCarousel.svelte';
 
-	import art1 from '$lib/images/AArt1.jpg';
-	import art2 from '$lib/images/AArt2.jpg';
-	import art3 from '$lib/images/A_Art3.jpg';
-	import art4 from '$lib/images/AArt4.jpg';
-	import art5 from '$lib/images/AArt5.jpg';
-	import art6 from '$lib/images/AArt6_.jpg';
-	import art7 from '$lib/images/AArt7.jpg';
-	
-
 	let photos = [
-		{ src: art1, text: 'Flowers (ink)' },
-		{ src: art2, text: 'Real Life Perspective (stained with coffee)' },
-		{ src: art3, text: 'Still Life (charcoal on grey canson paper)' },
-		{ src: art4, text: 'Color Wheel (acryllic on bristol) '},
-		{ src: art5, text: '"Fire and Water" (watercolor and acryllic)' },
-		{ src: art6, text: '"The Composer" (sharpie on bristol)' },
-		{ src: art7, text: 'Lady With a Hat (charcoal on tan canson paper)' },
-		
-
+		{ src: '/images/AArt1.jpg', text: 'Flowers (ink)' },
+		{ src: '/images/AArt2.jpg', text: 'Real Life Perspective (stained with coffee)' },
+		{ src: '/images/A_Art3.jpg', text: 'Still Life (charcoal on grey canson paper)' },
+		{ src: '/images/AArt4.jpg', text: 'Color Wheel (acryllic on bristol) '},
+		{ src: '/images/AArt5.jpg', text: '"Fire and Water" (watercolor and acryllic)' },
+		{ src: '/images/AArt6_.jpg', text: '"The Composer" (sharpie on bristol)' },
+		{ src: '/images/AArt7.jpg', text: 'Lady With a Hat (charcoal on tan canson paper)' },
 	];
 </script>
 
