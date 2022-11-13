@@ -4,6 +4,9 @@
 
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
+
+	import VanillaSwipe from 'vanilla-swipe';
 
 	/**
 	 * @type {object[]}
@@ -129,13 +132,36 @@
 		}, duration);
 	}
 
+	function swipe(evt, eventData) {
+		if (eventData.directionX === "LEFT") {
+			rotate(+1)
+		} else if (eventData.directionX === "RIGHT") {
+			rotate(-1)
+		}
+	}
+
+	let carouselContainer;
+
+	onMount(() => {
+		const isTouchEventsSupported = VanillaSwipe.isTouchEventsSupported();
+
+		const VS = new VanillaSwipe({
+			element: carouselContainer,
+			onSwiping: null,
+			onSwiped: swipe,
+			mouseTrackingEnabled: true,
+		});
+
+		VS.init();
+	});
+
 </script>
 
 <div style="height:50px;">
 	<div id="photo-text" class:hidden={!isHovered} class="centered">{photos.at((currentIndex) % photoCount).text}</div>
 </div>
 
-<div class="carouselContainer">
+<div bind:this={carouselContainer} class="carouselContainer">
 	
 	<!-- 
 	Since the below divs are positioned absolutely, they can be in any order.
