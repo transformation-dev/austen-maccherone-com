@@ -2,10 +2,10 @@
 	import PhotoCarousel from '$lib/components/PhotoCarousel.svelte';
 	
 	let photos = [
-		{ src: '/images/Art9.jpg', text: 'human' },
-		{ src: '/images/Art10_.jpg', text: 'masks' },
-		{ src: '/images/Art11.jpg', text: 'dark woods' },
-		{ src: '/images/AArt12.jpg', text: 'clown'},
+		{ src: '/images/Art9.jpg', text: 'Human' },
+		{ src: '/images/Art10_.jpg', text: 'Masks' },
+		{ src: '/images/Art11.jpg', text: 'Dark Woods' },
+		{ src: '/images/AArt12.jpg', text: 'Clown'},
 	];
 </script>
 
