@@ -21,7 +21,7 @@
 	<PhotoCarousel {photos} />
 </section>
 
-<h1 id="description">Fine Art</h1>
+<!-- <h1 id="description">Fine Art</h1> -->
 
 
 <style>

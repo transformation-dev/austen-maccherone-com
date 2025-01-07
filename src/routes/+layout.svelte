@@ -4,15 +4,15 @@
 </script>
 
 <div class="app">
-	<Header />
+	<!-- <Header /> -->
 
 	<main>
 		<slot />
 	</main>
 
-	<footer>
+	<!-- <footer>
 		<p>© 2022 - Austen Maccherone</p>
-	</footer>
+	</footer> -->
 </div>
 
 <style>
